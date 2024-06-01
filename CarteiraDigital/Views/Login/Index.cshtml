@@ -1,0 +1,26 @@
+﻿﻿@using System.Text.Json
+@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor HttpContextAccessor
+@{
+    ViewData["Title"] = "Login Page";
+}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="shortcut icon" href="./img/Logo_multi2.png">
+</head>
+<body>
+    <div class="text-center">
+        @{
+            //pegar as informações do session storage, desserealizar e adicionar a variável pessoa
+            var person = JsonSerializer.Deserialize<Person>(HttpContextAccessor.HttpContext.Session.GetString("User"));
+            string name = person.Name;
+            if (person.Id == 1)
+            {
+                name = "Admin " + name;
+            }
+        }
+        <h1 class="display-4">Bem vindo(a) @name!</h1>
+    </div>
+</body>

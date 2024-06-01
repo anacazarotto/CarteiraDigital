@@ -1,0 +1,28 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+
+.ubuntu {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 50px;}
+
+
+.ubuntu_secondary {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+}
+
+.logo {
+    width: 80px;
+    height: auto;
+    margin-right: 5px;
+}
+
+.navbar-brand img {
+    height: 10px;
+    width: auto;
+}
